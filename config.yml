@@ -14,7 +14,7 @@ map:
 init: false
 hassio_role: default
 services:
-  -mqtt:need
+  - mqtt: need
 homeassistant_api: false
 ingress: false
 panel_icon: mdi:home-lightning-bolt-outline
