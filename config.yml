@@ -1,0 +1,69 @@
+name: Amber2MQTT
+description: Energy Management for Home Assistant
+url: https://github.com/cabberley/amber2mqtt
+version: v2025.1.8 #set if use image container version
+slug: Amber2MQTT
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+image: "ghcr.io/cabberley/amber2mqtt" #set if use image container repository
+map:
+  - share:rw
+init: false
+hassio_role: default
+services:
+  -mqtt:need
+homeassistant_api: false
+ingress: false
+panel_icon: mdi:home-lightning-bolt-outline
+panel_title: Amber2MQTT
+options:
+  amber: 
+    - site_id : 
+    - access_token: 
+    - amber5minPrice_seconds: "14,16,18,19,21,23,25,27,30,32,35,40,45,50,55"
+    - amber5minPrice_minutes: "0-1,5-6,10-11,15-16,20-21,25-26,30-31,35-36,40-41,45-46,50-51,55-56"
+  integration:
+    - home_assistant: "False"
+    - amber2mqtt: "True"
+  logging:
+    - debug_mqtt": "False"
+    - debug_errors: "False"
+  Log_database: 
+    - db_name: "/app/data/schedulerlog.db"
+    - log_amber_5min_current_values: "False"
+    - log_amber_5min_forecasts: "False"
+  aemo:
+    - aemo5minPrice_seconds: "5,7,9,11,13,15,17,19,21,23,25,28,30,32,35,40,45,50,55"
+    - aemo5minPrice_minutes: "0-1,5-6,10-11,15-16,20-21,25-26,30-31,35-36,40-41,45-46,50-51,55-56"
+  mqtt:
+    - broker: "192.168.4.10"
+    - port: 1883
+    - client_id: "amber-2-mqtt"
+    - debug: "False"
+schema:
+    amber: 
+    - site_id : str
+    - access_token: str
+    - amber5minPrice_seconds: str
+    - amber5minPrice_minutes: str
+  integration:
+    - home_assistant: str
+    - amber2mqtt: str
+  logging:
+    - debug_mqtt": str
+    - debug_errors: str
+  Log_database: 
+    - db_name: str
+    - log_amber_5min_current_values: str
+    - log_amber_5min_forecasts: str
+  aemo:
+    - aemo5minPrice_seconds: str
+    - aemo5minPrice_minutes: str
+  mqtt:
+    - broker: str
+    - port: int
+    - client_id: str
+    - debug: str
