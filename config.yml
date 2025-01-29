@@ -44,7 +44,7 @@ options:
     - client_id: "amber-2-mqtt"
     - debug: "False"
 schema:
-    amber: 
+  amber: 
     - site_id : str
     - access_token: str
     - amber5minPrice_seconds: str
