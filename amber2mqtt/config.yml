@@ -1,5 +1,5 @@
 name: Amber2MQTT
-description: Energy Management for Home Assistant
+description: Amber & AEMO Power prices for Home Assistant
 url: https://github.com/cabberley/amber2mqtt
 version: 2025.1.16 #set if use image container version
 slug: Amber2MQTT
@@ -17,7 +17,7 @@ services:
   - mqtt:need
 homeassistant_api: false
 ingress: false
-panel_icon: mdi:home-lightning-bolt-outline
+panel_icon: mdi:currency-usd
 panel_title: Amber2MQTT
 options:
   amber: 
