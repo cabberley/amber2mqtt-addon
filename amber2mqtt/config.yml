@@ -1,7 +1,7 @@
 name: Amber2MQTT
 description: Energy Management for Home Assistant
 url: https://github.com/cabberley/amber2mqtt
-version: latest #set if use image container version
+version: 2025.1.10 #set if use image container version
 slug: Amber2MQTT
 arch:
   - aarch64
