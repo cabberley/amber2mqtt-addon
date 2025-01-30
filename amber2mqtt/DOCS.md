@@ -37,3 +37,6 @@ In the default config for example the Amber Site will be polled:
 
 Amber limits you currently to 50 requests per 5 minutes and if you exceed that you will be blocked until the next 5 minute period starts. So also take into considderation what other apps you have that are also hitting the Amber website as you will quickly run out of calls if there are delays in the price being published.
 
+The AEMO minutes and seconds work the same way.
+
+You can adjust these according to your needs, but in doing so consider the timing of when these prices are published and that they are not available immediately at the start of the 5min intervals!
