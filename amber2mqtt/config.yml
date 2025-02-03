@@ -1,7 +1,7 @@
 name: Amber2MQTT
 description: Amber & AEMO Power prices for Home Assistant
 url: https://github.com/cabberley/amber2mqtt
-version: 2025.1.17 #set if use image container version
+version: 2025.2.3 #set if use image container version
 slug: Amber2MQTT
 arch:
   - aarch64
@@ -25,6 +25,9 @@ options:
     access_token: "Your Amber Token"
     amber5minPrice_seconds: "14,16,18,19,21,23,25,27,30,32,35,40,45,50,55"
     amber5minPrice_minutes: "0-1,5-6,10-11,15-16,20-21,25-26,30-31,35-36,40-41,45-46,50-51,55-56"
+    forecast5min: "False"
+    forecast30min: "False"
+    forecastUser: "True"
   integration:
     home_assistant: "False"
     amber2mqtt: "True"
@@ -44,6 +47,10 @@ schema:
     access_token: str
     amber5minPrice_seconds: str
     amber5minPrice_minutes: str
+    forecast5min: str
+    forecast30min: str
+    forecastUser: str
+
   integration:
     home_assistant: str
     amber2mqtt: str
