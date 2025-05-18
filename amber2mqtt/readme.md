@@ -4,6 +4,8 @@ This addon will based on the timing schedules you setup:
 1. Poll the Amber API using your account details
 2. Poll the AEMO website to retrieve the latest actual price & data for the current interval
 
+**NOTE:** New sensors that will generate 5min periods from the Amber 30minute forecasts, these new sensors for Extended General and feed in prices use the available 5min prices and then convert the 30min forecasts into 6 x 5min forecasts for the 30 minute period. Helpful for those that use EMHASS and wish to do 5 minute time resolution predictions/plans. To enable this read below to add a new config option called "forecast288".
+
 **NOTE:** This Add-on does require a MQTT Broker, you can use the Mosquitto Add-on or an external Broker
 
 ## Installation
@@ -40,6 +42,7 @@ Updating 5min, 30min and Billing interval forecasts New option to add to your op
 "forecast5min": "True"
 "forecast30min": "True"
 "forecastUser": "True"
+"forecast288": "True"
 
 Amber limits you currently to 50 requests per 5 minutes and if you exceed that you will be blocked until the next 5 minute period starts. So also take into considderation what other apps you have that are also hitting the Amber website as you will quickly run out of calls if there are delays in the price being published.
 
