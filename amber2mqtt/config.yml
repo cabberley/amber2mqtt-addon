@@ -1,7 +1,7 @@
 name: Amber2MQTT
 description: Amber & AEMO Power prices for Home Assistant
 url: https://github.com/cabberley/amber2mqtt
-version: 2025.5.6 #set if use image container version
+version: 2025.6.1 #set if use image container version
 slug: Amber2MQTT
 arch:
   - aarch64
