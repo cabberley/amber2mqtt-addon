@@ -1,4 +1,16 @@
-# Home Assistant Add-on: Amber2MQTT
+<h1 align="center">
+  <br>
+  <i>Home Assistant Add-on: Amber2MQTT</i>
+  <br>
+  <h3 align="center">
+    <i>Home Assistant Add-on to run the Amber2MQTT container</i>
+    <br>
+  </h3>
+</h1>
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/cabberley" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
 
 This addon will based on the timing schedules you setup:
 1. Poll the Amber API using your account details
